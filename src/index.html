@@ -2213,10 +2213,16 @@ document.addEventListener("DOMContentLoaded", function () {
 
   siempreKasiButton.addEventListener("click", function () {
     const url = 'https://raw.githubusercontent.com/AceSower/Valentin_Kasi/9c6457025f52bd33a2193916f4625ffe70bfb968/Kasi%20Valent%C3%ADn.pdf';
-    window.open(url, '_blank', 'download=Kasi Valentín.pdf');
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = 'Kasi Valentín.pdf';
+    a.click();
+    // Agrega esta línea para evitar que el PDF se descargue dos veces
+    a.remove();
   });
 });
 
+//const url = 'https://raw.githubusercontent.com/AceSower/Valentin_Kasi/9c6457025f52bd33a2193916f4625ffe70bfb968/Kasi%20Valent%C3%ADn.pdf';
 
 
     document.addEventListener("DOMContentLoaded", function () {
